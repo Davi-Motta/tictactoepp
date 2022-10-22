@@ -73,7 +73,6 @@ int main()
             pos[input - 1] = player;
             taken[input - 1] = 1;
             playerIndex++;
-            cout << endl << playerIndex << endl;
         }
         if (playerIndex == 10){
             draw = true;
