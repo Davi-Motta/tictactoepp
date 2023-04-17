@@ -1,13 +1,12 @@
 #include <iostream>
-#include <cstdlib>
 
 using namespace std;
-char pos[] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
+string pos[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 int taken[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 int victory = 0;
 int input = 0;
 int playerIndex = 1;
-char player = 'X';
+string player = "❌";
 bool draw = false;
 
     void
@@ -66,7 +65,7 @@ int main()
     while (victory == 0 && draw == false)
     {
 
-        player = (playerIndex % 2) ? 'X' : 'O';
+        player = (playerIndex % 2) ? "❌" : "⭕";
         cin >> input;
         if (taken[input - 1] == 0)
         {
@@ -84,13 +83,11 @@ int main()
     if (draw == true)
     {
         cout << "Draw! \n" << endl;
-        system("pause");
     }
     else
     {
-    int winner = (player == 'X') ? 1 : 2;
+    int winner = (player == "❌") ? 1 : 2;
     cout << "Player " << winner << " wins! \n" << endl;
-    system("pause");
     }
     
     return 0;
